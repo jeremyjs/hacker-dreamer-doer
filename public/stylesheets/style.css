@@ -1,0 +1,249 @@
+html, body { height: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #FFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+p, ol, ul { margin-top: 0; }
+p { line-height: 180%; }
+
+a { color: #ee0000; }
+a:hover { text-decoration: none; }
+
+ol, ul {
+  padding: 0;
+  list-style: none;
+}
+
+.container-fluid {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*********************************************************************************/
+/* Image Style                                                                   */
+/*********************************************************************************/
+
+.image { display: inline-block; }
+
+.image img {
+  display: block;
+  width: 100%;
+}
+
+.image-full {
+  display: block;
+  width: 100%;
+  margin: 0 0 2em 0;
+}
+
+.image-left {
+  float: left;
+  margin: 0 2em 2em 0;
+}
+
+.image-centered {
+  display: block;
+  margin: 0 0 2em 0;
+}
+
+.image-centered img {
+  margin: 0 auto;
+  width: auto;
+}
+
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+
+.title {
+  font-size: 2.7em;
+  margin-bottom: 3em;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+.header {
+  position: relative;
+  background: #111111 url(/images/chicago-40.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cover {
+  position: relative;
+  padding: 0 4em 0 4em;
+  background: white;
+  background: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+}
+
+.scroll-arrow {
+  font-size: 5em;
+  opacity: 0.4;
+  margin-top: 1em;
+}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+.logo {
+  font-size: 2.6em;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+.menu {
+  margin-top: 30px;
+}
+
+.menu ul {
+  display: inline-block;
+}
+
+.menu li {
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+.menu li a,
+.menu li span {
+  padding: 1em 1.5em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: black;
+  color: rgba(255,255,255,0.80);
+}
+
+.menu .active a {
+  background: #2651a8;
+  border-radius: 6px;
+  color: black;
+  color: rgba(255,255,255,1);
+}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+.banner {
+  padding-top: 16em;
+}
+.banner .title {
+  font-size: 4em;
+}
+.banner .title .first {
+  margin-left: 1em;
+}
+.banner {
+  margin-bottom: 5em;
+}
+
+/*********************************************************************************/
+/* Content Sections                                                              */
+/*********************************************************************************/
+.section {
+  padding: 4em 0 7em 0;
+}
+
+.section .title {
+  text-align: left;
+}
+
+/*********************************************************************************/
+/* Projects                                                                      */
+/*********************************************************************************/
+
+.projects {
+  position: relative;
+  background: #FFF;
+}
+
+.projects .three-column .title {
+  color: black;
+}
+
+.project-image {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.projects .buttons {
+  text-align: center;
+}
+
+/*********************************************************************************/
+/* Contact                                                                       */
+/*********************************************************************************/
+.contact {
+  position: relative;
+  background: #2651a8;
+  background-size: cover;
+  text-align: center;
+}
+
+.contact a {
+  color: black;
+  color: rgba(255,255,255,1);
+}
+
+.contact .button {
+  background: #FFF;
+  color: #2651a8;
+}
+
+.contact-list {
+  margin: 0 auto;
+}
+
+.contact-list .icon {
+  padding-right: 5px;
+}
+
+.contact-list li {
+  font-size: 32px;
+  text-align: left;
+  display: block;
+}
+
+.contact-list li a {
+  text-decoration: none;
+}
+
+.contact-list li a:hover {
+  text-decoration: underline;
+}
+
+/*********************************************************************************/
+/* Helpers                                                                        */
+/*********************************************************************************/
+
+.left { text-align: left; }
+.center{ text-align: center; }
+.right { text-align: right; }
+.black { color: black; }
+.white { color: white; }
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
