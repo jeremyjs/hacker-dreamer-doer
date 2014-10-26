@@ -1,139 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+    Inspired by Assembly
+    templated.co/assembly
+-->
+<html>
 <head>
-<!-- Custom theme inspired by Assembly (http://templated.co) -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <title>Jeremy Meyer</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="http://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+<link href="stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
 
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 </head>
 <body>
-<div class="container-fluid">
-  <div id="header" class="header">
-    <div class="cover">
-      <div class="row">
-        <div class="col-md-3 col-md-offset-1">
-          <h1 class="logo"><a href="#">Jeremy Meyer</a></h1>
-        </div>
-        <div class="col-md-7 col-menu">
-          <div class="menu pull-right">
-            <ul>
-              <li class="active"><a href="#header" accesskey="1" title="">Home</a></li>
-              <li><a href="#projects" accesskey="2" title="">My Projects</a></li>
-              <li><a href="#about" accesskey="3" title="">About Me</a></li>
-              <li><a href="#resume" accesskey="4" title="">Contact &amp; Links</a></li>
-            </ul>
-          </div>
-        </div>
+<div id="header-wrapper">
+  <div class="cover">
+    <div id="header" class="container">
+      <div id="logo">
+        <h1><a href="#">Jeremy Meyer</a></h1>
       </div>
-      <div class="banner row">
-        <div class="col-lg-4 col-lg-offset-4">
-          <div class="title">
-            <!-- TODO: fix alignment -->
-            <h2 class="first left">Student,</h2>
-            <h2 class="center">Hacker,</h2>
-            <h2 class="right">Visionary.</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3 col-centered">
-          <div class="scroll-arrow center">
-            <p><i class="fa fa-chevron-circle-down"></i></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="projects" class="projects section">
-    <div class="row">
-        <h2 class="black">My Projects</h2>
-      <!-- TODO: fix image sizes -->
-      <div class="col-lg-4">
-        <a href="https://github.com/jjman505/PurdueMade" target="_blank"><img class="project-image" src="images/purdue_made.png"></a>
-        <p>Purdue Made is a project that I'm currently working on that will go live in the fall. It's designed to show off cool projects at Purdue University.</p>
-        <div class="buttons">
-          <a href="https://github.com/jjman505/PurdueMade" class="button button-alt" target="_blank">More Info</a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <a href="http://week.meteor.com/" target="_blank"><img class="project-image" src="images/meteor_week.png"></a>
-        <p>Meteor Week is a set of tutorials to teach people how to use Meteor.js to build awesome web applications. It's not quite finished yet.</p>
-        <div class="buttons">
-          <a href="http://week.meteor.com/" class="button button-alt" target="_blank">More Info</a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <a href="https://github.com/jjman505/ownership" target="_blank"><img class="project-image" src="images/ownership.png"></a>
-        <p>I'm also working on a Ruby on Rails project to facilitate project management which should be finished in the next few weeks.</p>
-        <div class="buttons">
-          <a href="https://github.com/jjman505/ownership" class="button button-alt" target="_blank">More Info</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="about" class="about section">
-    <div class="container">
-      <div class="title">
-        <h2>About Me</h2>
-      </div>
-      <div class="content">
-        <p>
-        My name is Jeremy and I'm a computer science student at Purdue University. I love to work on cool projects
-        and I have the most experience with Ruby on Rails, Meteor.js, and front-end HTML, JS, and CSS. I've been to
-        MHacks twice and I'm heavily involved in the entrepreneurship community at Purdue. This summer I'm a software
-        development intern at <a href="https://www.enova.com" target="_blank">Enova</a> in the beautiful city of Chicago
-        pictured above. My favorite color is blue.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div id="contact" class="contact section">
-    <div class="container">
-      <div class="title left">
-        <h2>Contact and Links</h2>
-      </div>
-      <div class="content">
-        <ul class="contact-list left">
-          <li>
-          <span class="icon"><i class="fa fa-envelope">&nbsp;</i></span>
-          <a href="mailto:jjman505@gmail.com" target="_blank">
-            <span class="redirect">Email</span>
-          </a>
-          </li>
-          <li>
-          <span class="icon"><i class="fa fa-github">&nbsp;</i></span>
-          <a href="https://github.com/jjman505" target="_blank">
-            Github
-          </a>
-          </li>
-          <li>
-          <span class="icon"><i class="fa fa-linkedin-square">&nbsp;</i></span>
-          <a href="https://linkedin.com/in/jeremypmeyer/" target="_blank">
-            LinkedIn
-          </a>
-          </li>
-          <li>
-          <span class="icon"><i class="fa fa-file-text-o">&nbsp;</i></span>
-          <a href="https://drive.google.com/file/d/0B9oq3GQ_WRQHNFRNZlVKM01wanc/edit?usp=sharing" target="_blank">
-            Resume
-          </a>
-          </li>
+      <div id="menu">
+        <ul>
+          <li class="active"><a href="#header" accesskey="1" title="">Home</a></li>
+          <li><a href="#projects" accesskey="2" title="">My Projects</a></li>
+          <li><a href="#about" accesskey="3" title="">About Me</a></li>
+          <li><a href="#resume" accesskey="4" title="">Contact & Links</a></li>
         </ul>
       </div>
+    </div>
+    <div id="banner" class="container">
+      <div class="title">
+        <!-- TODO: fix alignment -->
+        <h2 class="left">Student,</h2>
+        <h2 class="center">Hacker,</h2>
+        <h2 class="right">Dreamer.</h2>
+      </div>
+      <div class="scroll-arrow">
+        <i class="fa fa-chevron-circle-down"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="projects" class="section">
+  <div id="three-column" class="container black">
+    <div class="title">
+      <h2>My Projects</h2>
+    </div>
+    <!-- TODO: fix image sizes -->
+    <a class="project" href="http://social-mint.me/stock/show/TWTR" target="_blank">
+      <div class="boxA">
+        <h2>Social-Mint</h2>
+        <img class="project-image" src="images/social-mint.png">
+        <p>Social-Mint is a project I worked on at HackMizzou. It's an attempt to measure the sentiment of stock trends based on community voting.</p>
+      </div>
+    </a>
+    <a class="project" href="http://meteorweek.com" target="_blank">
+      <div class="boxB">
+        <h2>Meteor Week</h2>
+        <img class="project-image" src="images/meteor-week.png">
+        <p>Meteor Week is a set of tutorials to teach people how to use Meteor.js to build awesome web applications. It's not quite finished yet.</p>
+      </div>
+    </a>
+    <a class="project" href="http://sticky-notes-pm-tool.herokuapp.com/" target="_blank">
+      <div class="boxC">
+        <h2>Sticky Notes</h2>
+        <img class="project-image" src="images/sticky-notes.png">
+        <p>Sticky Notes is a web app for project management. It's similar to Trello. I built it with Ruby on Rails.</p>
+      </div>
+    </a>
+  </div>
+</div>
+<div id="about" class="section">
+  <div class="container">
+    <div class="title">
+      <h2>About Me</h2>
+    </div>
+    <div class="content">
+      <p>
+      My name is Jeremy and I'm a computer science student at Purdue University. I love to work on cool projects
+      and I have the most experience with Ruby on Rails, Meteor.js, and front-end HTML, JS, and CSS. I love
+      hackathons and I'm heavily involved in the entrepreneurship community at Purdue. This summer I interned
+      at <a href="https://www.enova.com" target="_blank">Enova</a> in the beautiful city of Chicago pictured above.
+      My favorite color is blue.
+      </p>
+    </div>
+  </div>
+</div>
+<div id="resume" class="section">
+  <div class="container">
+    <div class="title left">
+      <h2>Contact and Links</h2>
+    </div>
+    <div class="content">
+      <ul class="contact-list left">
+        <li>
+        <span class="icon"><i class="fa fa-envelope"></i></span>
+        <a href="mailto:jjman505@gmail.com" target="_blank">
+          <span class="redirect">Email</span>
+        </a>
+        </li>
+        <li>
+        <span class="icon"><i class="fa fa-github"></i></span>
+        <a href="https://github.com/jjman505" target="_blank">
+          Github
+        </a>
+        </li>
+        <li>
+        <span class="icon"><i class="fa fa-linkedin-square"></i></span>
+        <a href="https://linkedin.com/in/jeremypmeyer/" target="_blank">
+          LinkedIn
+        </a>
+        </li>
+        <li>
+        <span class="icon"><i class="fa fa-file-text-o"></i></span>
+        <a href="https://drive.google.com/file/d/0B9oq3GQ_WRQHNFRNZlVKM01wanc/edit?usp=sharing" target="_blank">
+          Resume
+        </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -152,6 +144,16 @@ $('a[href*=#]:not([href=#])').click(function() {
     }
   }
 });
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42718635-2', 'auto');
+  ga('send', 'pageview');
+
 </script>
 </body>
 </html>

@@ -1,37 +1,60 @@
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
+  background: #181818;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 12pt;
+  font-weight: 200;
   color: #FFF;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Didact Gothic', sans-serif;
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
 }
 
-p, ol, ul { margin-top: 0; }
-p { line-height: 180%; }
-
-a { color: #ee0000; }
-a:hover { text-decoration: none; }
+p, ol, ul {
+  margin-top: 0;
+}
 
 ol, ul {
   padding: 0;
   list-style: none;
 }
 
-.container-fluid {
+p {
+  line-height: 180%;
+}
+
+strong {
+}
+
+a {
+  color: #ee0000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
   overflow: hidden;
-  margin: 0 auto;
-  padding: 0;
+  margin: 0em auto;
+  width: 1200px;
 }
 
 /*********************************************************************************/
 /* Image Style                                                                   */
 /*********************************************************************************/
 
-.image { display: inline-block; }
+.image {
+  display: inline-block;
+}
 
 .image img {
   display: block;
@@ -60,31 +83,129 @@ ol, ul {
 }
 
 /*********************************************************************************/
+/* Social Icon Styles                                                            */
+/*********************************************************************************/
+
+ul.contact {
+  margin: 0;
+  padding: 2em 0em 0em 0em;
+  list-style: none;
+}
+
+ul.contact li {
+  display: inline-block;
+  padding: 0em 0.30em;
+  font-size: 1em;
+}
+
+ul.contact li span {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.contact li a {
+  color: #FFF;
+}
+
+ul.contact li a:before {
+  display: inline-block;
+  background: #3f3f3f;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+ul.contact li a.icon-twitter:before { background: #2DAAE4; }
+ul.contact li a.icon-facebook:before { background: #39599F; }
+ul.contact li a.icon-dribbble:before { background: #C4376B;	}
+ul.contact li a.icon-tumblr:before { background: #31516A; }
+ul.contact li a.icon-rss:before { background: #F2600B; }
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+.button {
+  display: inline-block;
+  padding: 1em 2em 1em 2em;
+  letter-spacing: 0.10em;
+  margin-top: 2em;
+  padding: 1.40em 3em;
+  background: #2651a8;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+  color: #FFF;
+}
+
+.button-alt {
+  padding: 1em 2em;
+  border-color: rgba(0,0,0,.8);
+  color: #FFF;
+}
+
+/*********************************************************************************/
+/* 3-column                                                                      */
+/*********************************************************************************/
+
+.boxA,
+.boxB,
+.boxC {
+  width: 384px;
+}
+
+.boxA,
+.boxB {
+  float: left;
+  margin-right: 20px;
+}
+
+.boxC {
+  float: right;
+}
+
+/*********************************************************************************/
 /* Heading Titles                                                                */
 /*********************************************************************************/
 
 .title {
-  font-size: 2.7em;
   margin-bottom: 3em;
+}
+
+.title h2 {
+  font-size: 2.7em;
+}
+
+.title .byline {
+  font-size: 1.3em;
+  color: rgba(255,255,255,0.60);
 }
 
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
 
-.header {
-  position: relative;
-  background: #111111 url(/images/chicago-40.jpg) no-repeat center;
+#header-wrapper {
+  background: #111111 url(../images/chicago-40.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
 
 .cover {
   position: relative;
-  padding: 0 4em 0 4em;
-  background: white;
+  padding: 0 0 1em 0;
   background: rgba(0, 0, 0, 0.6);
   background-size: cover;
+}
+
+#header {
+  position: relative;
+  padding: 5em 0;
 }
 
 .scroll-arrow {
@@ -97,64 +218,92 @@ ol, ul {
 /* Logo                                                                          */
 /*********************************************************************************/
 
-.logo {
-  font-size: 2.6em;
+#logo {
+  position: absolute;
+  top: 3.6em;
+  left: 0;
 }
 
-.logo a {
-  color: white;
+#logo h1 {
+  font-size: 2.6em;
+  color: #79C255;
+}
+
+#logo a {
   text-decoration: none;
+  color: rgba(255,255,255,1);
 }
 
 /*********************************************************************************/
 /* Menu                                                                          */
 /*********************************************************************************/
 
-.menu {
-  margin-top: 30px;
+#menu {
+  position: absolute;
+  top: 4.5em;
+  right: 0;
 }
 
-.menu ul {
+#menu ul {
   display: inline-block;
 }
 
-.menu li {
+#menu li {
   display: block;
   float: left;
   text-align: center;
 }
 
-.menu li a,
-.menu li span {
+#menu li a, #menu li span {
   padding: 1em 1.5em;
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8em;
-  color: black;
   color: rgba(255,255,255,0.80);
 }
 
-.menu .active a {
+#menu li:hover a, #menu li.active a, #menu li.active span {
+}
+
+#menu .active a {
   background: #2651a8;
   border-radius: 6px;
-  color: black;
   color: rgba(255,255,255,1);
+}
+#header .fixed {
+  position: fixed;
+  top: 0;
 }
 
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
 
-.banner {
-  padding-top: 16em;
+#banner {
+  padding-top: 4em;
+  text-align: center;
 }
-.banner .title {
+
+#banner .title h2 {
+  margin-left: 6em;
   font-size: 4em;
+  width: 7em;
 }
-.banner .title .first {
-  margin-left: 1em;
+
+#banner .title .byline {
+  font-size: 2em;
 }
+
+#banner .button {
+  margin-top: 2em;
+  padding: 1.40em 3em;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1em;
+
+}
+
 .banner {
   margin-bottom: 5em;
 }
@@ -163,7 +312,7 @@ ol, ul {
 /* Content Sections                                                              */
 /*********************************************************************************/
 .section {
-  padding: 4em 0 7em 0;
+  padding: 4em 0em 7em 0em;
 }
 
 .section .title {
@@ -174,43 +323,51 @@ ol, ul {
 /* Projects                                                                      */
 /*********************************************************************************/
 
-.projects {
+#projects {
   position: relative;
   background: #FFF;
 }
 
-.projects .three-column .title {
+#projects .three-column .title {
   color: black;
 }
 
 .project-image {
-  width: 100%;
+  width: inherit;
   margin-bottom: 5px;
 }
 
-.projects .buttons {
+#projects .buttons {
   text-align: center;
 }
 
+.project {
+  color: black;
+}
+
 /*********************************************************************************/
-/* Contact                                                                       */
+/* Welcome                                                                       */
 /*********************************************************************************/
-.contact {
+
+#resume {
   position: relative;
   background: #2651a8;
   background-size: cover;
   text-align: center;
 }
 
-.contact a {
-  color: black;
+#resume a {
   color: rgba(255,255,255,1);
 }
 
-.contact .button {
+#resume .button {
   background: #FFF;
   color: #2651a8;
 }
+
+/*********************************************************************************/
+/* Contact                                                                       */
+/*********************************************************************************/
 
 .contact-list {
   margin: 0 auto;
@@ -222,6 +379,7 @@ ol, ul {
 
 .contact-list li {
   font-size: 32px;
+  padding: 5px;
   text-align: left;
   display: block;
 }
@@ -235,15 +393,35 @@ ol, ul {
 }
 
 /*********************************************************************************/
-/* Helpers                                                                        */
+/* Extra                                                                         */
 /*********************************************************************************/
 
+.three-column {
+  text-align: center;
+  color: rgba(0,0,0,0.6);
+}
+
+.three-column .fa {
+  display: block;
+  padding: 1em 0em;
+  color: rgba(0,0,0,1);
+  font-size: 2em;
+}
+
+.three-column .title h2 {
+  font-weight: bold;
+  color: rgba(0,0,0,0.8);
+}
+
+.three-column .title .byline {
+  text-align: center;
+  color: rgba(0,0,0,.5);
+}
+
+/* Helpers */
+
 .left { text-align: left; }
-.center{ text-align: center; }
+.center { text-align: center; }
 .right { text-align: right; }
 .black { color: black; }
 .white { color: white; }
-.col-centered{
-  float: none;
-  margin: 0 auto;
-}
