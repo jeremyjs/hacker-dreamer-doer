@@ -17,7 +17,9 @@ app.get('/', function(req, res) {
 //   res.render('index.html');
 // });
 
-var server = app.listen(5000, function() {
+var port = process.env.PORT || 5000;
+
+var server = app.listen(port, function() {
     console.log('Listening on port %d', server.address().port);
 });
 
