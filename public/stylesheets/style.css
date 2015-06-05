@@ -12,7 +12,6 @@ body {
   color: #FFF;
 }
 
-
 h1, h2, h3 {
   margin: 0;
   padding: 0;
@@ -150,8 +149,34 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
 }
 
 /*********************************************************************************/
-/* 3-column                                                                      */
+/* Gallery                                                                       */
 /*********************************************************************************/
+
+.gallery .row {
+  margin-bottom: 20px;
+}
+
+.project {
+  position: relative;
+}
+
+.project figcaption h4,
+.project figcaption p,
+.project .contributers {
+  color: rgb(38, 81, 168);
+}
+
+.project:hover figcaption h4,
+.project:hover figcaption p,
+.project:hover .contributers {
+  color: rgb(238, 0, 0);
+}
+
+.entry-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .boxA,
 .boxB,
