@@ -7,7 +7,7 @@ body {
   padding: 0px;
   background: #181818;
   font-family: 'Didact Gothic', sans-serif;
-  font-size: 12pt;
+  font-size: 14pt;
   font-weight: 200;
   color: #FFF;
 }
@@ -230,7 +230,7 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
 
 #header {
   position: relative;
-  padding: 5em 0;
+  padding: 4em 0;
 }
 
 .scroll-arrow {
@@ -312,13 +312,18 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
 
 #banner .title > h2 {
   margin-left: 6em;
-  font-size: 4em;
+  font-size: 3.5em;
   width: 7em;
+}
+
+#banner .title > h2.smaller {
+  font-size: 2.5em;
+  margin-left: 9em;
 }
 
 #banner .title > h2.bigger {
   font-size: 5em;
-  margin-left: 3em;
+  margin-left: 2em;
 }
 
 #banner .title .byline {
