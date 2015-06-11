@@ -310,10 +310,15 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
   text-align: center;
 }
 
-#banner .title h2 {
+#banner .title > h2 {
   margin-left: 6em;
   font-size: 4em;
   width: 7em;
+}
+
+#banner .title > h2.bigger {
+  font-size: 5em;
+  margin-left: 3em;
 }
 
 #banner .title .byline {
