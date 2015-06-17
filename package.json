@@ -7,6 +7,7 @@
     "express": "3.x"
   },
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.5"
   }
 }
