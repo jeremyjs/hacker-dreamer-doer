@@ -3,7 +3,8 @@
 var gulp   = require('gulp'),
     jshint = require('gulp-jshint');
 
-var sourcePaths = { js: 'source/js/**/*.js' };
+var ignorePaths = ['materialize'];
+var sourcePaths = { js: 'source/js/!('+ignorePaths.join('|')+')/*.js' };
 
 // define the default task and add the watch task to it
 gulp.task('default', ['watch']);
