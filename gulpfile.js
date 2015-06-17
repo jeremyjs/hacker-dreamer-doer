@@ -1,8 +1,9 @@
 
 // grab our packages
-var gulp   = require('gulp'),
-    jshint = require('gulp-jshint'),
-    sass   = require('gulp-sass');
+var gulp       = require('gulp'),
+    jshint     = require('gulp-jshint'),
+    sass       = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps');
 
 var ignorePaths = ['materialize'];
 var sourcePaths = {
@@ -21,7 +22,9 @@ gulp.task('jshint', function() {
 
 gulp.task('build-css', function() {
   return gulp.src(sourcePaths.scss)
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/css'));
 });
 
