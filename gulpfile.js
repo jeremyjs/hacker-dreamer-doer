@@ -28,7 +28,17 @@ gulp.task('build-css', function() {
     .pipe(gulp.dest('public/css'));
 });
 
+gulp.task('build-js', function() {
+  return gulp.src(sourcePaths.js)
+    .pipe(sourcemaps.init())
+    .pipe(concat('bundle.js'))
+    // only uglify if gulp is run with '--type production'
+    .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('public/js'));
+});
+
 gulp.task('watch', function() {
-  gulp.watch(sourcePaths.js, ['jshint']);
+  gulp.watch(sourcePaths.js, ['jshint', 'build-js']);
   gulp.watch(sourcePaths.scss, ['build-css']);
 });
