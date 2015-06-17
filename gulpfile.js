@@ -1,22 +1,31 @@
 
 // grab our packages
 var gulp   = require('gulp'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    sass   = require('gulp-sass');
 
 var ignorePaths = ['materialize'];
-var sourcePaths = { js: 'source/js/!('+ignorePaths.join('|')+')/*.js' };
+var sourcePaths = {
+  js: 'source/js/!('+ignorePaths.join('|')+')/*.js',
+  scss: 'source/scss/**/*.scss'
+};
 
-// define the default task and add the watch task to it
+// watch on `gulp`
 gulp.task('default', ['watch']);
 
-// configure the jshint task
 gulp.task('jshint', function() {
   return gulp.src(sourcePaths.js)
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
-// configure which files to watch and what tasks to use on file changes
+gulp.task('build-css', function() {
+  return gulp.src(sourcePaths.scss)
+    .pipe(sass())
+    .pipe(gulp.dest('public/css'));
+});
+
 gulp.task('watch', function() {
   gulp.watch(sourcePaths.js, ['jshint']);
+  gulp.watch(sourcePaths.scss, ['build-css']);
 });
