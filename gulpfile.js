@@ -25,7 +25,7 @@ gulp.task('build-css', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/css'));
+    .pipe(gulp.dest('public/style.css'));
 });
 
 gulp.task('build-js', function() {

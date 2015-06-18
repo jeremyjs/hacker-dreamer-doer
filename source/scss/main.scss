@@ -1,4 +1,6 @@
 
+@import 'normalize';
+
 h1 {
   color: white;
 }
@@ -6,18 +8,16 @@ h1 {
 .slides {
   position: relative;
   width: 100%;
-}
 
-.slides > img {
-  position: fixed;
-  top: 0;
-  height: auto;
-  width: 100vw;
-  z-index: 1;
-}
+  > img {
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 100vw;
+    z-index: 1;
 
-.slides > img.active{
-  z-index:3
+    &.active { z-index:3 }
+  }
 }
 
 .filter {
