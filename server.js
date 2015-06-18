@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
   });
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 1337;
 
 var server = app.listen(port, function() {
     console.log('Listening on port %d', server.address().port);
