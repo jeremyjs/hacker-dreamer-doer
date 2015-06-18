@@ -11,12 +11,21 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
   <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 </head>
 <body>
+  <div class="slides">
+    <img class="active" src="img/skyline.jpg">
+    <img src="img/bridge-clouds.jpg">
+    <img src="img/valley.jpg">
+    <img src="img/bw-skyline.jpg">
+    <img src="img/bridge-skyline.jpg">
+    <img src="img/mountains.jpg">
+  </div>
   <div class="fullpage">
     <div class="title section" data-anchor="title"><h1>Hacker, Dreamer, Doer</h1></div>
     <div class="hacker section" data-anchor="hacker"><h1>Hacker</h1></div>
@@ -26,10 +35,22 @@
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.js"></script>
   <script>
+    function cycleImages () {
+      var container = '.slides';
+      var $active = $(container+' .active');
+      var $next = ($active.next().length > 0) ? $active.next() : $(container+' img:first');
+      $next.css('z-index',2);//move the next image up the pile
+      $active.fadeOut(2000,function(){//fade out the top image
+      $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+          $next.css('z-index',3).addClass('active');//make the next image the top one
+      });
+    };
     $(function () {
       $('.fullpage').fullpage({
         anchors: ['title', 'hacker', 'dreamer', 'doer']
       });
+
+      window.setInterval(cycleImages, 7000);
     });
   </script>
   <script>
