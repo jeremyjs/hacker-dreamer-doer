@@ -1,4 +1,8 @@
 
+h1 {
+  color: white;
+}
+
 .slides {
   position: relative;
   width: 100%;
@@ -16,6 +20,14 @@
   z-index:3
 }
 
-.fullpage {
+.filter {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
   z-index: 4;
+  background-color: rgba(0,0,0,.7);
+}
+
+.fullpage {
+  z-index: 5;
 }
