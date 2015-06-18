@@ -8,7 +8,7 @@ var gulp       = require('gulp'),
 var ignorePaths = ['materialize'];
 var sourcePaths = {
   js: 'source/js/!('+ignorePaths.join('|')+')/*.js',
-  scss: 'source/scss/**/*.scss'
+  scss: 'source/scss/**/main.scss'
 };
 
 // watch on `gulp`
@@ -25,7 +25,7 @@ gulp.task('build-css', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/style.css'));
+    .pipe(gulp.dest('public/'));
 });
 
 gulp.task('build-js', function() {
