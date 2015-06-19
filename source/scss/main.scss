@@ -1,8 +1,11 @@
 
+@import 'variables';
+
 @import 'normalize';
 
-h1 {
-  color: white;
+h1, h2, h3, h4, h5,
+p {
+  color: $color-header;
 }
 
 .slides {
@@ -30,4 +33,34 @@ h1 {
 
 .fullpage {
   z-index: 5;
+}
+
+.section {
+  width: 50%;
+  margin: 0 auto;
+
+  .title-text, .header {
+    font-family: 'Lobster Two', 'Courgette', 'Helvetica', sans-serif;
+    text-align: center;
+    margin: 0;
+  }
+
+  .header {
+    font-size: 6em;
+  }
+}
+
+.title.section .title-text {
+  &.top {
+    font-size: 4em;
+    margin-right: 15vw;
+  }
+  &.middle {
+    font-size: 6em;
+    margin-left: 4vw;
+  }
+  &.bottom {
+    font-size: 8em;
+    margin-left: 20vw;
+  }
 }
