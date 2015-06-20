@@ -40,5 +40,5 @@ gulp.task('build-js', function() {
 
 gulp.task('watch', function() {
   gulp.watch(sourcePaths.js, ['jshint', 'build-js']);
-  gulp.watch(sourcePaths.scss, ['build-css']);
+  gulp.watch('source/scss/**/*.scss', ['build-css']);
 });
