@@ -1,0 +1,16 @@
+
+.section {
+  width: 50% !important; /* override fullpage.js */
+  margin: 0 auto;
+
+  .title-text, .header {
+    font-family: 'Lobster Two', 'Courgette', 'Helvetica', sans-serif;
+    text-align: center;
+    margin: 0;
+  }
+
+  .header {
+    color: white;
+    font-size: 6em;
+  }
+}

@@ -1,0 +1,17 @@
+
+.title.section .title-text {
+  color: white;
+
+  &.top {
+    font-size: 4em;
+    margin-right: 15vw;
+  }
+  &.middle {
+    font-size: 6em;
+    margin-left: 4vw;
+  }
+  &.bottom {
+    font-size: 8em;
+    margin-left: 20vw;
+  }
+}
