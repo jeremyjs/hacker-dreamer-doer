@@ -2,12 +2,14 @@
 // grab our packages
 var gulp       = require('gulp'),
     jshint     = require('gulp-jshint'),
+    concat     = require('gulp-concat'),
+    gutil      = require('gulp-util'),
     sass       = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps');
 
 var ignorePaths = ['materialize'];
 var sourcePaths = {
-  js: 'source/js/!('+ignorePaths.join('|')+')/*.js',
+  js: 'source/js/**/*.js',
   scss: 'source/scss/**/main.scss'
 };
 
