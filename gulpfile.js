@@ -37,7 +37,7 @@ gulp.task('build-js', function() {
     // only uglify if gulp is run with '--type production'
     .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/js'));
+    .pipe(gulp.dest('public/'));
 });
 
 gulp.task('watch', function() {
