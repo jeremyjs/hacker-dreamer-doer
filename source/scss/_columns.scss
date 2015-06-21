@@ -1,0 +1,10 @@
+
+.columns {
+  // padding: 0;
+
+  &.two-column {
+    .column {
+      width: 45%;
+    }
+  }
+}
