@@ -1,0 +1,47 @@
+
+.contact-form {
+  .form-title { color: white; }
+
+  .form {
+    .form-row { margin-bottom: 20px; }
+
+    .input-field {
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      padding: 0;
+      color: white;
+      background-color: rgba(0,0,0,0);
+      border: none;
+      border-bottom: solid white 2px;
+      outline: none;
+      transition: all .3s;
+
+      &:focus, &.active {
+        margin-top: $form-line-height + 5px;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: $form-line-height;
+      resize: none;
+      overflow: hidden;
+    }
+
+    label {
+      color: #9E9E9E;
+      position: absolute;
+      cursor: text;
+      transition: .2s ease-out;
+
+      &.active {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+}
