@@ -5,9 +5,11 @@
   float: left;
 
   .link {
-    font-size: 26px;
+    display: block;
     margin-bottom: 10px;
     color: white;
+    font-size: 26px;
+    text-decoration: none;
 
     .fa { margin-right: 10px; }
   }
