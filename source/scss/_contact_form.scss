@@ -1,6 +1,13 @@
 
 .contact-form {
-  .form-title { color: white; }
+  width: 45%;
+  float: left;
+  margin-left: 3.5%;
+
+  .form-title {
+    margin-top: 0;
+    color: white;
+  }
 
   .form {
     .form-row { margin-bottom: 20px; }
