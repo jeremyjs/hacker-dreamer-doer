@@ -103,6 +103,9 @@
         <div class="contact-form">
           <h2 class="form-title"> Contact Me </h2>
           <form action="" class="form">
+          <div class="form-row">
+            <p class="notice"></p>
+          </div>
             <div class="form-row">
               <div class="input-field">
                 <label for="contact-name">Name</label>
@@ -170,6 +173,16 @@
       if(isReady(parent)) $(parent).find('.btn').animate({left: '0'}, "fast");
       else                $(parent).find('.btn').animate({left: '-140px'}, "fast");
     };
+    function validateEmail (email) {
+      if(isValidEmail(email)) {
+        return true;
+      }
+      else {
+        $('.notice').html('Please enter a valid email address.');
+        $('.notice').show();
+        return false;
+      }
+    };
     $(function () {
       $('.fullpage').fullpage({
         anchors: ['title', 'hacker', 'dreamer', 'doer']
@@ -190,6 +203,33 @@
         if(value === '') parent.children().removeClass('active');
         else             parent.children().addClass('active');
         checkAndAddSubmit($target.parents('.form'));
+      });
+
+      $('.form').submit(function (e) {
+        e.preventDefault();
+        var form    = e.target;
+        var name    = $(form).find('input.name').val();
+        var email   = $(form).find('input.email').val();
+        var message = $(form).find('textarea.message').val();
+        if(!validateEmail(email)) return;
+        sendmail({
+          name: name,
+          email: email,
+          message: message
+        }, function (res) {
+          if(res.success) {
+            $(form).find('input.name').val('');
+            $(form).find('input.email').val('');
+            $(form).find('textarea.message').val('');
+            $(form).find('.input-field').children().removeClass('active');
+            checkAndAddSubmit(form);
+            $('.notice').html('Message Sent!');
+            $('.notice').show();
+          } else {
+            $('.notice').html(res.message);
+            $('.notice').show();
+          }
+        });
       });
     });
   </script>
