@@ -1,8 +1,12 @@
 {
-  "name": "hello-world",
-  "description": "hello world test app",
-  "version": "0.0.1",
+  "name": "hacker-dreamer-doer",
+  "description": "Hacker, Dreamer, Doer",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "gulp build-js && gulp build-css"
+  },
   "dependencies": {
     "body-parser": "^1.13.1",
     "express": "3.x",
