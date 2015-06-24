@@ -28,11 +28,11 @@ app.post('/api/mail/send', function (req, res) {
     text: body.message
   }, function error (err, info){
     if(err) {
-      console.log(err);
-      res.send({ responseCode: 500, message: 'Error sending email: ' + err, success: false });
+      var message = 'Error sending email: ' + err;
+      console.log(message);
+      res.send({ responseCode: 500, message: message, success: false });
     }
     else {
-      console.log('Message sent: ' + info.response);
       res.send({ responseCode: 200, message: 'success', success: true });
     }
   });
