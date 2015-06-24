@@ -51,5 +51,21 @@
         font-size: 18px;
       }
     }
+
+    .btn-container {
+      position: relative;
+      overflow: hidden;
+      height: 27px;
+
+      .btn {
+        font-size: 18px;
+        color: white;
+        outline: none;
+        border: solid white 2px;
+        background: none;
+        position: absolute;
+        left: -140px;
+      }
+    }
   }
 }

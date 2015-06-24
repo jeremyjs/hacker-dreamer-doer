@@ -121,6 +121,13 @@
                 <textarea id="contact-message" class="message"></textarea>
               </div>
             </div>
+            <div class="form-row">
+              <div class="btn-container">
+                <button class="btn">
+                  Send Message
+                </button>
+              </div>
+            </div>
           </form>
         </div>
         <div class="links">
@@ -154,6 +161,15 @@
           $next.css('z-index',3).addClass('active');//make the next image the top one
       });
     };
+    function isReady (parent) {
+      return $(parent).find('input, textarea').toArray().every(function (elem) {
+        return $(elem).val() !== '';
+      });
+    };
+    function checkAndAddSubmit (parent) {
+      if(isReady(parent)) $(parent).find('.btn').animate({left: '0'}, "fast");
+      else                $(parent).find('.btn').animate({left: '-140px'}, "fast");
+    };
     $(function () {
       $('.fullpage').fullpage({
         anchors: ['title', 'hacker', 'dreamer', 'doer']
@@ -162,17 +178,18 @@
       window.setInterval(cycleImages, 7000);
 
       $('.cover').css('opacity', '0');
-      $('.cover').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e){
+      $('.cover').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function (e) {
         $(this).css('z-index', '0');
         $(this).off(e);
       });
 
-      $('.input-field > input, .input-field > textarea').keyup(function(e) {
+      $('.input-field > input, .input-field > textarea').keyup(function (e) {
         var $target = $(e.target);
         var value   = $target.val();
         var parent  = $target.parent();
         if(value === '') parent.children().removeClass('active');
         else             parent.children().addClass('active');
+        checkAndAddSubmit($target.parents('.form'));
       });
     });
   </script>
