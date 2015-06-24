@@ -2,6 +2,9 @@
 public/main.css
 public/bundle.js
 
+# Private auth info
+secrets.js
+
 # Mac files
 .DS_Store
 
