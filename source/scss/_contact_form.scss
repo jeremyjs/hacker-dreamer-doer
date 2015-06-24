@@ -43,6 +43,7 @@
       position: absolute;
       cursor: text;
       transition: .2s ease-out;
+      z-index: -1;
 
       &.active {
         color: white;
