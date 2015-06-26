@@ -11,5 +11,5 @@ do
   LOCALPATH="${FILEPATH:`expr match "$FILEPATH" "$SRCPATH/"`}"
   FINALPATH="$DESTPATH/$LOCALPATH"
   mkdir -p $FINALPATH
-  jpgadept $file -o "$FINALPATH/" -s ""
+  jpgadept $file -o $FINALPATH -s ""
 done
