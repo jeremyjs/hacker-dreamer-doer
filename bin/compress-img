@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ROOT=`pwd`
+SRCPATH="$ROOT/source/img"
+DESTPATH="$ROOT/public/img"
+
+shopt -s globstar
+for file in $SRCPATH/**/*.jpg
+do
+  FILEPATH="${file%/*}"
+  LOCALPATH="${FILEPATH:`expr match "$FILEPATH" "$SRCPATH/"`}"
+  FINALPATH="$DESTPATH/$LOCALPATH"
+  mkdir -p $FINALPATH
+  jpgadept $file -o "$FINALPATH/" -s ""
+done
