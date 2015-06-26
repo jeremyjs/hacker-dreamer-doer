@@ -201,13 +201,13 @@
         }
       });
 
-      window.setInterval(cycleImages, 7000);
 
       $('.cover').css('opacity', '0');
       $('.cover').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function (e) {
         $(this).css('z-index', '0');
         $(this).off(e);
         window.setTimeout(nextSlide, 3000);
+        window.setInterval(cycleImages, 7000);
       });
 
       $('.input-field > input, .input-field > textarea').keyup(function (e) {
