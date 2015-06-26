@@ -13,3 +13,15 @@ do
   mkdir -p $FINALPATH
   jpgadept $file -o $FINALPATH -s ""
 done
+
+for file in $SRCPATH/**/*.png
+do
+  FILEPATH="${file%/*}"
+  FILENAME="${file##/*/}"
+  LOCALPATH="${FILEPATH:`expr match "$FILEPATH" "$SRCPATH/"`}"
+  FINALPATH="$DESTPATH/$LOCALPATH"
+  mkdir -p $FINALPATH
+  printf "Compressing $LOCALPATH/$FILENAME\r\n"
+  /usr/local/bin/pngquant 256 $file --ext ".png.comp"
+  mv "$file.comp" "$FINALPATH/$FILENAME"
+done
