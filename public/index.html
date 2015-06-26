@@ -162,7 +162,7 @@
       $next.css('z-index',2);//move the next image up the pile
       $active.fadeOut(2000,function(){//fade out the top image
       $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
-          $next.css('z-index',3).addClass('active');//make the next image the top one
+        $next.css('z-index',3).addClass('active');//make the next image the top one
       });
     };
     function isReady (parent) {
@@ -190,9 +190,15 @@
     function stopSpinner () {
       $('.fa-spinner').hide();
     };
+    function nextSlide () {
+      if(!window.alreadyScrolled) $.fn.fullpage.moveSectionDown();
+    };
     $(function () {
       $('.fullpage').fullpage({
-        anchors: ['title', 'hacker', 'dreamer', 'doer']
+        anchors: ['title', 'hacker', 'dreamer', 'doer'],
+        onLeave: function (index, nextIndex, direction) {
+          if(index === 1) window.alreadyScrolled = true;
+        }
       });
 
       window.setInterval(cycleImages, 7000);
@@ -201,6 +207,7 @@
       $('.cover').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function (e) {
         $(this).css('z-index', '0');
         $(this).off(e);
+        window.setTimeout(nextSlide, 3000);
       });
 
       $('.input-field > input, .input-field > textarea').keyup(function (e) {
