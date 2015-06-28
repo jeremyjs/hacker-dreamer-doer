@@ -1,8 +1,10 @@
 
-.section {
+.section:not(.hacker) {
   width: 50% !important; /* override fullpage.js */
   margin: 0 auto;
+}
 
+.section {
   .title-text, .header {
     font-family: 'Lobster Two', 'Courgette', 'Helvetica', sans-serif;
     text-align: center;
@@ -23,4 +25,8 @@
     font-size: 20px;
     text-align: center;
   }
+}
+
+@media (max-width: 460px) {
+  .section .header { font-size: 16em; }
 }
