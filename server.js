@@ -10,7 +10,6 @@ var transporter = nodemailer.createTransport({
 });
 
 app.set('public', __dirname + '/public');
-app.engine('html', require('ejs').renderFile);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
