@@ -179,10 +179,12 @@ sub {
 
 /**
  * Remove border when inside `a` element in IE 8/9/10.
+ * Enable a responsive design
  */
 
 img {
   border: 0;
+  max-width: 100%;
 }
 
 /**
