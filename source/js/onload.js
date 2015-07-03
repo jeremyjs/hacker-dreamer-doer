@@ -30,15 +30,30 @@ function stopSpinner () {
 }
 
 function nextSlide () {
-  if(!window.alreadyScrolled) $.fn.fullpage.moveSectionDown();
+  if(!window.alreadyScrolled && $.fn.fullpage && $.fn.fullpage.moveSectionDown) {
+    $.fn.fullpage.moveSectionDown();
+  }
 }
 
-$(function () {
-
+function activateFullpage () {
   $('.fullpage').fullpage({
     anchors: ['title', 'hacker', 'dreamer', 'doer'],
     onLeave: function (index, nextIndex, direction) {
       if(index === 1) window.alreadyScrolled = true;
+    }
+  });
+}
+
+$(function () {
+
+  var minWidth = window.matchMedia('all and (min-width: 700px)');
+  console.log('minWidth, minWidth.matches: ', minWidth, minWidth.matches);
+  if(minWidth.matches) activateFullpage();
+  minWidth.addListener(function (changed) {
+    if(changed.matches) {
+      activateFullpage();
+    } else if($.fn.fullpage) {
+      $.fn.fullpage.destroy('all');
     }
   });
 
