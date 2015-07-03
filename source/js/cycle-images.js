@@ -7,4 +7,4 @@ function cycleImages () {
   $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
     $next.css('z-index',3).addClass('active');//make the next image the top one
   });
-};
+}

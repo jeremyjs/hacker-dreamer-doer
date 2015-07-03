@@ -3,12 +3,12 @@ function isReady (parent) {
   return $(parent).find('input, textarea').toArray().every(function (elem) {
     return $(elem).val() !== '';
   });
-};
+}
 
 function checkAndAddSubmit (parent) {
   if(isReady(parent)) $(parent).find('.btn').animate({left: '0'}, "fast");
   else                $(parent).find('.btn').animate({left: '-140px'}, "fast");
-};
+}
 
 function validateEmail (email) {
   if(isValidEmail(email)) {
@@ -19,19 +19,19 @@ function validateEmail (email) {
     $('.notice').show();
     return false;
   }
-};
+}
 
 function startSpinner () {
   $('.fa-spinner').show();
-};
+}
 
 function stopSpinner () {
   $('.fa-spinner').hide();
-};
+}
 
 function nextSlide () {
   if(!window.alreadyScrolled) $.fn.fullpage.moveSectionDown();
-};
+}
 
 $(function () {
 
