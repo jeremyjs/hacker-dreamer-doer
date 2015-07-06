@@ -1,12 +1,8 @@
 #!/bin/bash
 
-echo "\n# Source images\nsource/img/*\n" >> .gitignore
-git add .gitignore
-git commit -m "don't deploy source images"
-
 git add secrets.js -f
 git commit -m "added secrets.js"
 
 git push -f heroku master
 
-git reset HEAD~2
+git reset --hard HEAD~1
