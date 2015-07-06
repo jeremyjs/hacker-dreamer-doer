@@ -1,10 +1,15 @@
 
-.section:not(.hacker) {
-  width: 50% !important; /* override fullpage.js */
-  margin: 0 auto;
+@media (min-width: $bp-med) {
+  .section:not(.hacker) {
+    width: 50% !important; /* override fullpage.js */
+    margin: 0 auto;
+  }
 }
 
 .section {
+  width: 100% !important; /* override fullpage.js */
+  margin: 0;
+
   .title-text, .header {
     font-family: 'Lobster Two', 'Courgette', 'Helvetica', sans-serif;
     text-align: center;
