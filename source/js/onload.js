@@ -46,16 +46,7 @@ function activateFullpage () {
 
 $(function () {
 
-  var minWidth = window.matchMedia('all and (min-width: 700px)');
-  console.log('minWidth, minWidth.matches: ', minWidth, minWidth.matches);
-  if(minWidth.matches) activateFullpage();
-  minWidth.addListener(function (changed) {
-    if(changed.matches) {
-      activateFullpage();
-    } else if($.fn.fullpage) {
-      $.fn.fullpage.destroy('all');
-    }
-  });
+  activateFullpage();
 
   $('.cover').css('opacity', '0');
   $('.cover').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function (e) {
