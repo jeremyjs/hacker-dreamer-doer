@@ -13,6 +13,11 @@ var sourcePaths = {
   scss: 'source/scss/**/main.scss'
 };
 
+function logError (err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 // watch on `gulp`
 gulp.task('default', ['build', 'watch']);
 
@@ -28,6 +33,7 @@ gulp.task('build-css', function() {
   return gulp.src(sourcePaths.scss)
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .on('error', logError)
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/'));
 });
