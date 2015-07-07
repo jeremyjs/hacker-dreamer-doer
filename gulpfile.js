@@ -14,7 +14,9 @@ var sourcePaths = {
 };
 
 // watch on `gulp`
-gulp.task('default', ['watch']);
+gulp.task('default', ['build', 'watch']);
+
+gulp.task('build', ['jshint', 'build-js', 'build-css']);
 
 gulp.task('jshint', function() {
   return gulp.src(sourcePaths.js)
