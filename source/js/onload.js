@@ -44,8 +44,19 @@ function activateFullpage () {
   });
 }
 
+var images = ['valley', 'golden-gate', 'lake-mountain', 'new-york'];
+var imageIndex = 0;
+function loadImage () {
+  if(imageIndex >= images.length) return;
+  var img = images[imageIndex];
+  var activeClass = (imageIndex === 0) ? 'class="active"' : '';
+  $('.slides').append('<img '+activeClass+' src="img/slides/'+img+'.jpg" onload="loadImage();">');
+  imageIndex++;
+}
+
 $(function () {
 
+  loadImage();
   activateFullpage();
 
   $('.cover').css('opacity', '0');
