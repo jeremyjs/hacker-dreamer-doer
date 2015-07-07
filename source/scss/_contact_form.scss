@@ -1,8 +1,8 @@
 
 .contact-form {
-  width: 45%;
-  float: left;
+  width: 60%;
   margin-left: 20%;
+  float: left;
 
   .form-title {
     margin-top: 0;
@@ -71,5 +71,19 @@
         left: -140px;
       }
     }
+  }
+}
+
+@media (min-width: $bp-med2) {
+  .contact-form {
+    width: 45%;
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: $bp-large) {
+  .contact-form {
+    width: 60%;
+    margin-left: 10%;
   }
 }

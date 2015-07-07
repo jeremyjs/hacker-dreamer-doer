@@ -1,11 +1,4 @@
 
-@media (min-width: $bp-med) {
-  .section:not(.hacker) {
-    width: 50% !important; /* override fullpage.js */
-    margin: 0 auto;
-  }
-}
-
 .section {
   width: 100% !important; /* override fullpage.js */
   margin: 0;
@@ -32,6 +25,19 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: $bp-small) {
   .section .header { font-size: 16em; }
+}
+
+@media (min-width: $bp-med) {
+  .section:not(.hacker) {
+    min-width: 50% !important; /* override fullpage.js */
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $bp-large) {
+  .section:not(.hacker) {
+    width: 50% !important; /* override fullpage.js */
+  }
 }
