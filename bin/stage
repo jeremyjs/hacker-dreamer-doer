@@ -5,4 +5,4 @@ git commit -m "added secrets.js"
 
 git push -f stage stage:master
 
-git reset --hard HEAD~1
+git reset HEAD~1
