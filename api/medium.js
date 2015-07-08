@@ -1,5 +1,6 @@
 var router = require('express').Router();
 var medium = require('node-medium');
+var _ = require('lodash');
 var asyncRetrieve = require('../local_modules/async-retrieve');
 
 router.get('/', function (req, res, next) {
@@ -24,8 +25,16 @@ router.get('/posts', function (req, res, next) {
 
 router.get('/posts/all', function (req, res, next) {
   medium.getUser('jjman505', function (profile) {
-    asyncRetrieve(profile.posts, function retrieve (post, callback) {
-      medium.getPost('jjman505', post.id, callback);
+    asyncRetrieve(profile.posts, function retrieve (postStub, callback) {
+      medium.getPost('jjman505', postStub.id, function (post) {
+        if(post.inResponseToPostId && post.inResponseToPostId !== '') {
+          callback(null);
+          return;
+        }
+        var result = _.pick(post, ['title', 'subTitle', 'createdAt']);
+        result.id = postStub.id;
+        callback(result);
+      });
     }, function done (posts) {
       res.send(posts);
     });
@@ -33,7 +42,7 @@ router.get('/posts/all', function (req, res, next) {
 });
 
 router.get('/posts/:id', function (req, res, next) {
-  medium.getPost('jjman505', post.id, function (post) {
+  medium.getPost('jjman505', req.params.id, function (post) {
     res.send(post);
   });
 });
