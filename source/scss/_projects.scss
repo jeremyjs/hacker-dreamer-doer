@@ -7,7 +7,7 @@
 
 .projects {
   max-width: 100vh;
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 0;
   display: inline-block;
 
@@ -37,7 +37,14 @@
   }
 }
 
-.external-profile {
-  margin-top: -15px;
-  text-align: center;
+.section.hacker .lead a {
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid $color-body;
+  transition: all .3s;
+
+  &:hover {
+    padding-bottom: 1px;
+    border-bottom: 2px solid $color-body;
+  }
 }
