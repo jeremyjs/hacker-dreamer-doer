@@ -1,35 +1,54 @@
 
-.title.section .title-text {
-  width: 100%;
-  color: white;
+.title.section {
+  .portrait {
+    margin: 0 auto 20px;
+    width: 55%;
 
-  &.top {
-    font-size: 4em;
-    // margin-left: 15%;
-    position: relative;
-    &::after {
-      content: ',';
-      position: absolute;
+    img {
+      border-radius: 50%;
     }
   }
-  &.middle {
-    font-size: 6em;
-    // margin-left: 10%;
-    &::after {
-      content: ',';
-      position: absolute;
+  .title-text {
+  width: 100%;
+    color: white;
+
+    &.top {
+      font-size: 4em;
+      // margin-left: 15%;
+      position: relative;
+      &::after {
+        content: ',';
+        position: absolute;
+      }
     }
-  }
-  &.bottom {
-    font-size: 8em;
-    // margin-left: 20vw;
+    &.middle {
+      font-size: 6em;
+      // margin-left: 10%;
+      position: relative;
+      &::after {
+        content: ',';
+        position: absolute;
+      }
+    }
+    &.bottom {
+      font-size: 8em;
+      // margin-left: 20vw;
+    }
   }
 }
 
 @media (max-width: $bp-small) {
   .title.section .title-text {
-    &.top    { font-size: 3em; }
-    &.middle { font-size: 4em; }
-    &.bottom { font-size: 6em; }
+    &.top    { font-size: 2em; }
+    &.middle { font-size: 3em; }
+    &.bottom { font-size: 5em; }
+  }
+}
+
+@media (min-width: $bp-small) {
+  .title.section {
+    .portrait {
+      width: 300px;
+    }
   }
 }
