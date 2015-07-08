@@ -25,3 +25,11 @@
     // margin-left: 20vw;
   }
 }
+
+@media (max-width: $bp-small) {
+  .title.section .title-text {
+    &.top    { font-size: 3em; }
+    &.middle { font-size: 4em; }
+    &.bottom { font-size: 6em; }
+  }
+}
