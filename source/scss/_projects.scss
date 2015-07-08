@@ -1,12 +1,15 @@
 
 .projects-wrapper {
-  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
 }
 
 .projects {
   max-width: 100vh;
   margin: 0 auto;
   padding: 0;
+  display: inline-block;
 
   .project {
     width: 45%;
