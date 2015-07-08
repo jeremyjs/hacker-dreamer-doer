@@ -17,10 +17,23 @@ router.get('/profile', function (req, res, next) {
   });
 });
 
+router.get('/posts', function (req, res, next) {
+  res.redirect('./posts/all');
+});
+
 router.get('/posts/all', function (req, res, next) {
   medium.getUser('jjman505', function (profile) {
     var posts = [];
-    res.send(profile.posts);
+    var waiting = profile.posts.length;
+    profile.posts.forEach(function (post) {
+      medium.getPost('jjman505', post.id, function (post) {
+        posts.push(post);
+        waiting--;
+        if(waiting <= 0) {
+          res.send(posts);
+        }
+      });
+    });
   });
 });
 
