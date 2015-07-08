@@ -47,6 +47,7 @@ function activateFullpage () {
 $(function () {
 
   loadImage();
+  loadBlogPosts();
   activateFullpage();
 
   $('.cover').css('opacity', '0');
