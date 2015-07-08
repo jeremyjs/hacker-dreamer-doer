@@ -20,3 +20,11 @@
     margin-left: 40px;
   }
 }
+
+@media (max-width: $bp-xs) and (max-height: $bp-xs-h) {
+  .doer.section {
+    .links .link {
+      font-size: 18px;
+    }
+  }
+}
