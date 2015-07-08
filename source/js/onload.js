@@ -83,7 +83,7 @@ $(function () {
       if(res.success) {
         $(form).find('input.name').val('');
         $(form).find('input.email').val('');
-        $(form).find('textarea.message').val('');
+        $(form).find('textarea.message').val('').css('height', '18px');
         $(form).find('.input-field').children().removeClass('active');
         checkAndAddSubmit(form);
         $('.notice').html('Message Sent!');
