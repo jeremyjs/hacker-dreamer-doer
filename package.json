@@ -17,7 +17,8 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.5",
     "jshint-stylish": "^2.0.0",
-    "node-medium": "0.0.1",
+    "lodash": "^3.10.0",
+    "node-medium": "https://github.com/jjman505/node-medium/tarball/83c43848748c2eeda6c2d2be4a611f817cfb3033",
     "nodemailer": "^1.3.4",
     "purify-css": "^1.0.15"
   }
