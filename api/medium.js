@@ -1,5 +1,6 @@
 var router = require('express').Router();
 var medium = require('node-medium');
+var asyncRetrieve = require('../local_modules/async-retrieve');
 
 router.get('/', function (req, res, next) {
   res.send({
@@ -23,16 +24,10 @@ router.get('/posts', function (req, res, next) {
 
 router.get('/posts/all', function (req, res, next) {
   medium.getUser('jjman505', function (profile) {
-    var posts = [];
-    var waiting = profile.posts.length;
-    profile.posts.forEach(function (post) {
-      medium.getPost('jjman505', post.id, function (post) {
-        posts.push(post);
-        waiting--;
-        if(waiting <= 0) {
-          res.send(posts);
-        }
-      });
+    asyncRetrieve(profile.posts, function retrieve (post, callback) {
+      medium.getPost('jjman505', post.id, callback);
+    }, function done (posts) {
+      res.send(posts);
     });
   });
 });
