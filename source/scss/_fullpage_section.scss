@@ -26,7 +26,12 @@
 }
 
 @media (max-width: $bp-small) {
-  .section .header { font-size: 16em; }
+  .section .header { font-size: 5em; }
+  .section .lead   { font-size: 1.2em; }
+}
+
+@media (max-width: $bp-xs) and (max-height: $bp-xs-h) {
+  .section .header { font-size: 4em; }
 }
 
 @media (min-width: $bp-med) {
