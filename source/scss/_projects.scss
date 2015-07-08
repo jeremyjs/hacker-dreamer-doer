@@ -1,3 +1,8 @@
+
+.projects-wrapper {
+  display: inline-block;
+}
+
 .projects {
   max-width: 100vh;
   margin: 0 auto;
@@ -27,4 +32,9 @@
       }
     }
   }
+}
+
+.external-profile {
+  margin-top: -15px;
+  text-align: center;
 }
