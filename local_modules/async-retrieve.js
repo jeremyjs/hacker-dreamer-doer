@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 module.exports = function asyncRetrieve (collection, retrieve, done) {
   var result = [];
   var waiting = collection.length;
@@ -6,6 +8,7 @@ module.exports = function asyncRetrieve (collection, retrieve, done) {
       result.push(item);
       waiting--;
       if(waiting <= 0) {
+        result = _.compact(result);
         done(result);
       }
     });
