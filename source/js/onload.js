@@ -37,7 +37,7 @@ function nextSlide () {
 
 function activateFullpage () {
   $('.fullpage').fullpage({
-    anchors: ['title', 'hacker', 'dreamer', 'doer'],
+    anchors: ['title', 'about', 'hacker', 'dreamer', 'doer'],
     onLeave: function (index, nextIndex, direction) {
       if(index === 1) window.alreadyScrolled = true;
     }

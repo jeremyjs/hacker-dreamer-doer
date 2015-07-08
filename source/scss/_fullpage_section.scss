@@ -21,6 +21,14 @@
     font-size: 20px;
     text-align: center;
   }
+
+  p {
+    width: 70%;
+    margin: 0 auto 10px;
+    text-align: justify;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  }
 }
 
 @media (max-width: $bp-small) {
@@ -37,10 +45,21 @@
     min-width: 50% !important; /* override fullpage.js */
     margin: 0 auto;
   }
+
+  .section p {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+  }
 }
 
 @media (min-width: $bp-large) {
   .section:not(.hacker) {
     width: 50% !important; /* override fullpage.js */
+  }
+
+  .section p {
+    font-size: 20px;
+    line-height: 36px;
   }
 }
