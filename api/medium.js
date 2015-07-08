@@ -36,6 +36,7 @@ router.get('/posts/all', function (req, res, next) {
         callback(result);
       });
     }, function done (posts) {
+      posts = _.sortBy(posts, 'createdAt');
       res.send(posts);
     });
   });
