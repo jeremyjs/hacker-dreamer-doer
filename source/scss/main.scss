@@ -2,6 +2,7 @@
 @import 'variables';
 
 @import 'normalize';
+@import 'typography';
 @import 'bg_slides';
 @import 'fullpage_section';
 @import 'title_page';
@@ -10,7 +11,6 @@
 @import 'links';
 
 .placeholder {
-  color: white;
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #f0f0f0;
+  background-color: $color-bg;
   opacity: 1;
   transition: opacity 1s linear;
   z-index: 10;
