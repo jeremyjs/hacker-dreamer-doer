@@ -11,7 +11,7 @@ function loadBlogPost (post) {
     imgSource: 'https://d262ilb51hltx0.cloudfront.net/max/2000/1*RJJJg4IzAwJPj4SjEe-7uA.jpeg',
     title: 'Personal Manifesto',
     subTitle: 'Get inspired. Do something epic.'
-  }
+  };
   var html =  '<div class="post">' +
                 '<a href="'+post.url+'" target="_blank">' +
                   '<img src="'+post.imgSource+'" alt="'+post.title+' Image">' +
