@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "body-parser": "^1.13.1",
-    "express": "3.x",
+    "express": "4.x",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.5.2",
     "gulp-jshint": "^1.11.0",
