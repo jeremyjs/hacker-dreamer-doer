@@ -37,4 +37,10 @@ router.get('/posts/all', function (req, res, next) {
   });
 });
 
+router.get('/posts/:id', function (req, res, next) {
+  medium.getPost('jjman505', post.id, function (post) {
+    res.send(post);
+  });
+});
+
 module.exports = router;
