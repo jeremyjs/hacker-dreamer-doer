@@ -44,16 +44,6 @@ function activateFullpage () {
   });
 }
 
-var images = ['valley', 'golden-gate', 'lake-mountain', 'new-york'];
-var imageIndex = 0;
-function loadImage () {
-  if(imageIndex >= images.length) return;
-  var img = images[imageIndex];
-  var activeClass = (imageIndex === 0) ? 'class="active"' : '';
-  $('.slides').append('<img '+activeClass+' src="img/slides/'+img+'.jpg" onload="loadImage();">');
-  imageIndex++;
-}
-
 $(function () {
 
   loadImage();
@@ -64,7 +54,6 @@ $(function () {
     $(this).css('z-index', '0');
     $(this).off(e);
     window.setTimeout(nextSlide, 3000);
-    window.setInterval(cycleImages, 7000);
   });
 
   $('.input-field > input, .input-field > textarea').keyup(function (e) {
